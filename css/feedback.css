@@ -1,0 +1,123 @@
+.feedback {
+  height: 720px;
+  width: 100%;
+  background-color: var(--red);
+}
+
+.feedback__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 45px;
+  padding: 40px 0;
+}
+
+.feedback-header {
+  display: flex;
+  max-width: 890px;
+  width: 100%;
+  height: fit-content;
+}
+@media (max-width: 768px) {
+  .feedback-header {
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .feedback-header {
+    margin-top: 10px;
+  }
+}
+.feedback-header__title {
+  color: white;
+  font-size: 56px;
+}
+
+.feedback-form {
+  display: flex;
+  background-color: rgba(225, 225, 225, 0.8);
+  flex-direction: column;
+  align-self: center;
+  border-radius: 20px;
+  max-width: 710px;
+  width: 100%;
+  height: 230px;
+  justify-content: center;
+  gap: 40px;
+  transition: 0.3s ease-in-out;
+}
+.feedback-form:hover {
+  background-color: rgba(215, 215, 215, 0.7);
+}
+@media (max-width: 375px) {
+  .feedback-form {
+    gap: 10px;
+  }
+}
+
+.feedback-form__caption {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .feedback-form__caption {
+    text-align: center;
+  }
+}
+.form__input {
+  display: block;
+  outline: none;
+  background-color: rgba(215, 215, 215, 0.8);
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 0 15px;
+}
+
+.form__button-holder {
+  display: flex;
+  justify-content: center;
+}
+
+.form__button-holder,
+.form__input {
+  min-width: 250px;
+  width: 45%;
+  height: 50px;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 5%;
+  gap: 30px 0;
+}
+.contact-form button {
+  align-content: center;
+}
+
+@media (max-width: 1023px) {
+  .feedback-header__title {
+    font-size: calc(16px + (40 + 40) * ((100vw - 320px) / 1280));
+  }
+  .feedback,
+  .feedback-form,
+  .contact-form {
+    height: fit-content;
+    max-height: none;
+  }
+  .feedback-form {
+    padding: 40px 20px;
+  }
+  .form__button-holder,
+  .form__input {
+    max-width: 320px;
+    width: 100%;
+  }
+  .contact-form {
+    justify-content: center;
+  }
+}
