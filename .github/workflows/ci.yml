@@ -17,3 +17,9 @@ jobs:
 
       - name: Check PHP
         run: php -v
+
+      - name: Install Semgrep
+        run: pip install semgrep
+
+      - name: Run SAST
+        run: semgrep scan --config auto .
