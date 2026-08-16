@@ -24,3 +24,13 @@ jobs:
       - name: Run SAST
         run: semgrep scan --config auto --error .
         continue-on-error: true
+
+      - name: Run SCA with Trivy
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          scanners: 'vuln'
+          format: 'table'
+          severity: 'HIGH,CRITICAL'
+          exit-code: '0'
